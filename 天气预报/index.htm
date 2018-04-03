@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<div class="title">AI路况短报</div>
+	<div class="map">
+		<img src="./images/p2.png"> </div>
+	<!-- <div class="voice">
+		<img src="./images/p1.png"> </div> -->
+	<div id="audio" class="voice">
+		<audio src="" controls="controls"></audio>
+	</div>
+	<div class="container">
+		<div id="tiaqi" class="content">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;大家好！现在为您播报路况信息！今天是11月24日，星期五，现在时间是19:50。 大连市区天气以多云为主，风力6级。 目前市内主要道路：沈海高速：自南向北畅通。西安路：基本畅通。 长春路，五一路等进出市区道路双向畅通。大家可以选择通行。 市区周边道路：鹤大高速：大连湾大桥附近自西向东畅通。 振兴路，虹港路，虹城路，金虹东路等进出市区道路双向畅通。大家可以选择通行。 高速公路方面：沈海高速，鹤大高速正常通行。 道路施工信息方面： 进行道路施工的路段有：当前道路靠近双岛湾路--民惠街路口西向东正在施工。 高新街动漫游产业大厦附近北向南正在施工。 当前道路靠近双樱路--双岛湾路路口东向西正在施工。 以下是群众发来的交通事件信息： 鲁迅路海事，百合山庄大有恬园，鲁迅路海事发生交通事故，过往车辆请注意安全!</p>
+			<!-- <p> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;周四、周五大连天空云量比较多，气温没有大的起色，市区日间气温将维持在0~5℃。直到周六，天气才再度明显回暖起来，市区最高气温有望见到8℃。 但是周日又会有新的冷空气到来，市区最高气温又会降到3度附近。</p> -->
+			<p></p>
+		</div>
+	</div>
+	<script type="text/javascript"> 
+		var url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=5&text=";
+		zhText = encodeURI($.trim($("#tiaqi p").text().replace('        ', '')));
+		// var audio = new Audio('http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text=' + zhText);//路径
+		// audio.play();
+		// audio.onended = function () { alert(111) };
+		$("audio").attr('src', (url + zhText));
+	</script>
+</body>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,49 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.map {
+	padding: 10px;
+}
+
+.map img {
+	width: 100%;
+}
+
+.container {
+	height: 100%;
+	width: calc(100% - 20px);
+	background: url(../images/bg.png) no-repeat;
+	margin: 0 10px 10px 10px;
+}
+
+.content {
+	background-color: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	padding: 15px;
+	margin: 15px;
+	float: left;
+	width: calc(100% - 60px);
+}
+
+.content p {
+	line-height: 22px;
+	font-size: 14px;
+}
+
+.voice {
+	width: 100%;
+}
+
+.voice img {
+	width: calc(100% - 20px);
+	margin: 10px;
+}
