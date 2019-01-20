@@ -31,11 +31,10 @@
 		</div>
 	</div>
 	<script type="text/javascript"> 
-		var url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=5&text=";
-		zhText = encodeURI($.trim($("#tiaqi p").text().replace('        ', '')));
-		// var audio = new Audio('http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=2&text=' + zhText);//路径
-		// audio.play();
-		// audio.onended = function () { alert(111) };
+		var tok = '24.1b6add7424219ef368b1cd778529e86d.2592000.1549790350.282335-11350444';
+		var url = "http://tsn.baidu.com/text2audio?tok=" + tok + "&cuid=123456567&ctp=1&lan=zh&tex=";
+		zhText = encodeURI($.trim($("#tiaqi p").text().replace(/\s+/g,"")));
+		console.log(url + encodeURI(encodeURI(zhText)));
 		$("audio").attr('src', (url + zhText));
 	</script>
 </body>
